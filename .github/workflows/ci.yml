@@ -13,10 +13,10 @@ jobs:
     - name: Checkout repository
       uses: action/checkout@v2
 
-    -name: Build Docker image
+    - name: Build Docker image
       run: |
-        docker build -t vowel-frequency-analyzer:latest
-
+        docker build -t vowel-frequency-analyzer:latest .
+    
     - name: Run Docker Ccontainer
       run: |
         docker run --rm \
