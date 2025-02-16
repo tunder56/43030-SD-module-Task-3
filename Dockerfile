@@ -3,5 +3,5 @@ WORKDIR /app
 COPY reqs.txt .
 #RUN pip install -r reqs.txt
 COPY . .
-RUN cmod +x entrypoint.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT [ "entrypoint.sh" ]
